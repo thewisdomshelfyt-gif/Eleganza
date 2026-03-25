@@ -141,46 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ── Countdown Timer ── */
-  function updateCountdown() {
-    const deadlineStr = (typeof ADMIN_DATA !== 'undefined')
-      ? ADMIN_DATA.offerDeadline
-      : null;
-    if (!deadlineStr) return;
 
-    const deadline = new Date(deadlineStr).getTime();
-
-    function tick() {
-      const now  = Date.now();
-      const diff = deadline - now;
-
-      if (diff <= 0) {
-        document.getElementById('cd-days-num').textContent  = '00';
-        document.getElementById('cd-hours-num').textContent = '00';
-        document.getElementById('cd-mins-num').textContent  = '00';
-        document.getElementById('cd-secs-num').textContent  = '00';
-        return;
-      }
-
-      const days  = Math.floor(diff / 86400000);
-      const hours = Math.floor((diff % 86400000) / 3600000);
-      const mins  = Math.floor((diff % 3600000)  / 60000);
-      const secs  = Math.floor((diff % 60000)    / 1000);
-
-      const pad = n => String(n).padStart(2, '0');
-
-      document.getElementById('cd-days-num').textContent  = pad(days);
-      document.getElementById('cd-hours-num').textContent = pad(hours);
-      document.getElementById('cd-mins-num').textContent  = pad(mins);
-      document.getElementById('cd-secs-num').textContent  = pad(secs);
-    }
-
-    tick();
-    setInterval(tick, 1000);
-  }
-
-  /* Delay countdown init until ADMIN_DATA is ready */
-  setTimeout(updateCountdown, 100);
 
   /* ── Scroll-Reveal (IntersectionObserver) ── */
   const revealEls = document.querySelectorAll(

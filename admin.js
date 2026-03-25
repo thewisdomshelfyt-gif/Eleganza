@@ -8,22 +8,21 @@
  *
  *  HOW TO USE THE ADMIN PANEL (in-browser):
  *  1. Click the ⚙ gear icon (bottom-left corner).
- *  2. Enter password: eleganza2025
+ *  2. Enter password: eleganza2025!!
  *  3. Manage offers, arrivals info, social links & announcement.
  *  ─────────────────────────────────────────────────
  *  Admin Password: eleganza2025  (change below)
  * =====================================================
  */
 
-const ADMIN_PASSWORD = 'eleganza2025';
+const ADMIN_PASSWORD = 'eleganza2025!!';
 
 /* ─── Default Data ─── */
 const DEFAULT_DATA = {
 
   announcement: '✨ Free delivery on orders over Rs. 3,500 — <strong>Limited time offer!</strong>',
 
-  /* Offer deadline — ISO string. Set to a future date. */
-  offerDeadline: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000).toISOString(),
+
 
   /* Weekly Offers ─ add/remove objects freely */
   offers: [
@@ -58,7 +57,7 @@ const DEFAULT_DATA = {
     {
       id: 'social-instagram',
       name: 'Instagram',
-      url: 'https://www.instagram.com/eleganza.lk',
+      url: 'https://www.instagram.com/eleganza.lk?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==',
       icon: 'instagram',
       styleClass: 'instagram'
     },
@@ -77,7 +76,7 @@ function loadData() {
   try {
     const saved = localStorage.getItem('eleganza_admin_data');
     if (saved) return JSON.parse(saved);
-  } catch(e) {}
+  } catch (e) { }
   return JSON.parse(JSON.stringify(DEFAULT_DATA));
 }
 
@@ -127,7 +126,7 @@ function renderOffers() {
 /* ─── Render: Social Links ─── */
 function renderSocials() {
   const contactSocials = document.getElementById('social-links');
-  const footerSocials  = document.getElementById('footer-social-list');
+  const footerSocials = document.getElementById('footer-social-list');
 
   const socials = ADMIN_DATA.socials || [];
 
@@ -177,20 +176,12 @@ function switchAdminTab(tabName) {
   document.querySelector(`[data-tab="${tabName}"]`).classList.add('active');
   document.getElementById(`apanel-${tabName}`).style.display = 'block';
 
-  if (tabName === 'offers')       renderAdminOffersList();
-  if (tabName === 'socials')      renderAdminSocialsList();
+  if (tabName === 'offers') renderAdminOffersList();
+  if (tabName === 'socials') renderAdminSocialsList();
   if (tabName === 'announcement') {
     document.getElementById('announcement-input').value = ADMIN_DATA.announcement || '';
   }
-  if (tabName === 'offers') {
-    const deadline = ADMIN_DATA.offerDeadline;
-    if (deadline) {
-      const local = new Date(deadline);
-      const pad = n => String(n).padStart(2, '0');
-      const iso = `${local.getFullYear()}-${pad(local.getMonth()+1)}-${pad(local.getDate())}T${pad(local.getHours())}:${pad(local.getMinutes())}`;
-      document.getElementById('offer-deadline-input').value = iso;
-    }
-  }
+
 }
 
 /* Admin: Offers List */
@@ -256,7 +247,7 @@ function initAdminEvents() {
 
   /* Login */
   const loginBtn = document.getElementById('admin-login-btn');
-  const pwInput  = document.getElementById('admin-password-input');
+  const pwInput = document.getElementById('admin-password-input');
 
   function attemptLogin() {
     if (pwInput.value === ADMIN_PASSWORD) {
@@ -280,10 +271,10 @@ function initAdminEvents() {
   });
 
   /* Add Offer */
-  const addOfferBtn    = document.getElementById('add-offer-btn');
-  const offerForm      = document.getElementById('admin-offer-form');
+  const addOfferBtn = document.getElementById('add-offer-btn');
+  const offerForm = document.getElementById('admin-offer-form');
   const cancelOfferBtn = document.getElementById('cancel-offer-btn');
-  const saveOfferBtn   = document.getElementById('save-offer-btn');
+  const saveOfferBtn = document.getElementById('save-offer-btn');
 
   addOfferBtn.addEventListener('click', () => {
     offerForm.style.display = 'flex';
@@ -294,10 +285,10 @@ function initAdminEvents() {
     addOfferBtn.style.display = 'inline-flex';
   });
   saveOfferBtn.addEventListener('click', () => {
-    const name     = document.getElementById('offer-name-input').value.trim();
+    const name = document.getElementById('offer-name-input').value.trim();
     const discount = document.getElementById('offer-discount-input').value.trim();
-    const desc     = document.getElementById('offer-desc-input').value.trim();
-    const imgUrl   = document.getElementById('offer-img-input').value.trim();
+    const desc = document.getElementById('offer-desc-input').value.trim();
+    const imgUrl = document.getElementById('offer-img-input').value.trim();
     if (!name || !discount) return;
     const newOffer = { id: 'offer-' + Date.now(), name, discount, description: desc, imgUrl, emoji: '🎀' };
     ADMIN_DATA.offers.push(newOffer);
@@ -306,27 +297,18 @@ function initAdminEvents() {
     renderAdminOffersList();
     offerForm.style.display = 'none';
     addOfferBtn.style.display = 'inline-flex';
-    ['offer-name-input','offer-discount-input','offer-desc-input','offer-img-input'].forEach(id => {
+    ['offer-name-input', 'offer-discount-input', 'offer-desc-input', 'offer-img-input'].forEach(id => {
       document.getElementById(id).value = '';
     });
     showSaveStatus();
   });
 
-  /* Offer Deadline */
-  document.getElementById('save-deadline-btn').addEventListener('click', () => {
-    const val = document.getElementById('offer-deadline-input').value;
-    if (val) {
-      ADMIN_DATA.offerDeadline = new Date(val).toISOString();
-      saveData(ADMIN_DATA);
-      showSaveStatus();
-    }
-  });
 
   /* Add Social */
-  const addSocialBtn    = document.getElementById('add-social-btn');
-  const socialForm      = document.getElementById('admin-social-form');
+  const addSocialBtn = document.getElementById('add-social-btn');
+  const socialForm = document.getElementById('admin-social-form');
   const cancelSocialBtn = document.getElementById('cancel-social-btn');
-  const saveSocialBtn   = document.getElementById('save-social-btn');
+  const saveSocialBtn = document.getElementById('save-social-btn');
 
   addSocialBtn.addEventListener('click', () => {
     socialForm.style.display = 'flex';
@@ -338,7 +320,7 @@ function initAdminEvents() {
   });
   saveSocialBtn.addEventListener('click', () => {
     const name = document.getElementById('social-name-input').value.trim();
-    const url  = document.getElementById('social-url-input').value.trim();
+    const url = document.getElementById('social-url-input').value.trim();
     const icon = document.getElementById('social-icon-input').value.trim() || 'link';
     if (!name || !url) return;
     const styleClass = name.toLowerCase().replace(/\s+/g, '-');
@@ -348,7 +330,7 @@ function initAdminEvents() {
     renderAdminSocialsList();
     socialForm.style.display = 'none';
     addSocialBtn.style.display = 'inline-flex';
-    ['social-name-input','social-url-input','social-icon-input'].forEach(id => {
+    ['social-name-input', 'social-url-input', 'social-icon-input'].forEach(id => {
       document.getElementById(id).value = '';
     });
     showSaveStatus();
