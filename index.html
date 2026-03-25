@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Eleganza — Premium Baby Clothing & Lifestyle Store in Sri Lanka. Discover curated newborn and toddler fashion, gift sets, and accessories with on-site service and quick visit options." />
+  <meta name="keywords"
+    content="baby clothing, premium baby fashion, newborn outfits, baby gifts, Sri Lanka, Eleganza, baby lifestyle store" />
+  <meta property="og:title" content="Eleganza | Premium Baby Clothing & Lifestyle" />
+  <meta property="og:description" content="Adorable. Elegant. Crafted for your little one." />
+  <meta property="og:image" content="eleganza.jpg" />
+  <meta name="theme-color" content="#5b21b6" />
+  <title>Eleganza | Premium Baby Clothing & Lifestyle</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ===================== ANNOUNCEMENT BAR ===================== -->
+  <div class="announcement-bar" id="announcement-bar">
+    <div class="announcement-inner">
+      <span class="announcement-text" id="announcement-text">✨ Free delivery on orders over Rs. 3,500 — <strong>Limited
+          time offer!</strong></span>
+      <button class="announcement-close" id="announcement-close" aria-label="Close announcement">
+        <i data-lucide="x" style="width:14px;height:14px;"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <!-- Logo -->
+      <a href="#hero" class="logo" id="logo-link" aria-label="Eleganza Home">
+        <img src="eleganza.jpg" alt="Eleganza Logo" class="logo-img" />
+        <div class="logo-text">
+          <span class="logo-name">Eleganza</span>
+          <span class="logo-tagline">Baby &amp; Lifestyle</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-desktop" role="navigation" aria-label="Main navigation">
+        <a href="#hero" class="nav-link" id="nav-home">Home</a>
+        <a href="#new-arrivals" class="nav-link" id="nav-arrivals">New Arrivals</a>
+        <a href="#offers" class="nav-link" id="nav-offers">Weekly Offers</a>
+        <a href="#services" class="nav-link" id="nav-services">Services</a>
+        <a href="#contact" class="nav-link" id="nav-contact">Contact</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <div class="service-badge" id="service-badge">
+          <i data-lucide="map-pin" style="width:14px;height:14px;"></i>
+          <span>Quick Visit</span>
+        </div>
+        <button class="btn-primary btn-sm" id="nav-cta"
+          onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+          Shop Now
+        </button>
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <nav class="nav-mobile" id="nav-mobile" role="navigation" aria-label="Mobile navigation">
+      <a href="#hero" class="nav-link-mobile" id="mnav-home">Home</a>
+      <a href="#new-arrivals" class="nav-link-mobile" id="mnav-arrivals">New Arrivals</a>
+      <a href="#offers" class="nav-link-mobile" id="mnav-offers">Weekly Offers</a>
+      <a href="#services" class="nav-link-mobile" id="mnav-services">Services</a>
+      <a href="#contact" class="nav-link-mobile" id="mnav-contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-orb hero-orb-1"></div>
+    <div class="hero-bg-orb hero-orb-2"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow" id="hero-eyebrow">New Season Collection 2025</span>
+      <h1 class="hero-title" id="hero-title">
+        Dressed in <em>Elegance</em>,<br />Born for <em>Wonder</em>
+      </h1>
+      <p class="hero-subtitle">Premium baby clothing &amp; lifestyle essentials — crafted with love, designed for
+        extraordinary little ones.</p>
+      <div class="hero-actions">
+        <a href="#new-arrivals" class="btn-primary btn-lg" id="hero-cta-shop">
+          Explore Collection
+          <i data-lucide="arrow-right" style="width:18px;height:18px;"></i>
+        </a>
+        <a href="#offers" class="btn-ghost btn-lg" id="hero-cta-offers">
+          Weekly Offers
+          <i data-lucide="tag" style="width:18px;height:18px;"></i>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat" id="stat-1">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Products</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat" id="stat-2">
+          <span class="stat-number">2,000+</span>
+          <span class="stat-label">Happy Families</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat" id="stat-3">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Premium Quality</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual" id="hero-visual">
+      <div class="hero-image-frame">
+        <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=700&q=85&auto=format&fit=crop"
+          alt="Elegant baby clothing collection" class="hero-img" id="hero-main-img" loading="eager" />
+        <div class="hero-badge-float hero-badge-1" id="hero-badge-new">
+          <i data-lucide="sparkles" style="width:14px;height:14px;"></i>
+          New Arrivals
+        </div>
+        <div class="hero-badge-float hero-badge-2" id="hero-badge-offer">
+          <i data-lucide="percent" style="width:14px;height:14px;"></i>
+          Up to 40% Off
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- ===================== FEATURES STRIP ===================== -->
+  <section class="features-strip" id="features-strip">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-item" id="feat-1">
+          <div class="feature-icon">
+            <i data-lucide="shield-check"></i>
+          </div>
+          <div class="feature-text">
+            <strong>Premium Quality</strong>
+            <span>Skin-safe, certified fabrics</span>
+          </div>
+        </div>
+        <div class="feature-item" id="feat-3">
+          <div class="feature-icon">
+            <i data-lucide="map-pin"></i>
+          </div>
+          <div class="feature-text">
+            <strong>Quick Visit</strong>
+            <span>In-store experience available</span>
+          </div>
+        </div>
+        <div class="feature-item" id="feat-4">
+          <div class="feature-icon">
+            <i data-lucide="headphones"></i>
+          </div>
+          <div class="feature-text">
+            <strong>On-site Service</strong>
+            <span>Personal styling assistance</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== NEW ARRIVALS ===================== -->
+  <section class="section new-arrivals" id="new-arrivals">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Just In</span>
+        <h2 class="section-title">New Arrivals</h2>
+        <p class="section-subtitle">Freshly curated pieces for your little one — elegance in every stitch.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs" id="filter-tabs" role="tablist">
+        <button class="filter-tab active" id="tab-all" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="filter-tab" id="tab-newborn" data-filter="newborn" role="tab"
+          aria-selected="false">Newborn</button>
+        <button class="filter-tab" id="tab-toddler" data-filter="toddler" role="tab"
+          aria-selected="false">Toddler</button>
+        <button class="filter-tab" id="tab-girl" data-filter="girl" role="tab" aria-selected="false">Girls</button>
+        <button class="filter-tab" id="tab-boy" data-filter="boy" role="tab" aria-selected="false">Boys</button>
+        <button class="filter-tab" id="tab-gifts" data-filter="gifts" role="tab" aria-selected="false">Gift
+          Sets</button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="products-grid">
+
+        <div class="product-card" id="prod-1" data-category="newborn girl">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=500&q=80&auto=format&fit=crop"
+              alt="Premium Newborn Romper Set" loading="lazy" class="product-img" />
+            <div class="product-overlay">
+              <div class="product-overlay-content">
+                <span class="product-tag-overlay">Newborn · 0–3M</span>
+                <p class="product-desc-overlay">Soft cotton blend with elegant lace trim. Hypoallergenic &amp;
+                  skin-safe.</p>
+                <button class="btn-primary btn-sm product-cta" onclick="openWhatsApp('Premium Newborn Romper Set')">
+                  <i data-lucide="message-circle" style="width:14px;height:14px;"></i> Enquire
+                </button>
+              </div>
+            </div>
+            <span class="product-badge badge-new">New</span>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Newborn · Girls</span>
+            <h3 class="product-name">Premium Romper Set</h3>
+            <div class="product-price-row">
+              <span class="product-price">Rs. 2,850</span>
+              <span class="product-price-old">Rs. 3,500</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" id="prod-2" data-category="toddler boy">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1471286174890-9c112ac6476b?w=500&q=80&auto=format&fit=crop"
+              alt="Royal Blue Toddler Set" loading="lazy" class="product-img" />
+            <div class="product-overlay">
+              <div class="product-overlay-content">
+                <span class="product-tag-overlay">Toddler · 1–2Y</span>
+                <p class="product-desc-overlay">Breathable cotton with subtle royal accents. Perfect for everyday wear.
+                </p>
+                <button class="btn-primary btn-sm product-cta" onclick="openWhatsApp('Royal Toddler Set')">
+                  <i data-lucide="message-circle" style="width:14px;height:14px;"></i> Enquire
+                </button>
+              </div>
+            </div>
+            <span class="product-badge badge-new">New</span>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Toddler · Boys</span>
+            <h3 class="product-name">Royal Toddler Set</h3>
+            <div class="product-price-row">
+              <span class="product-price">Rs. 3,200</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" id="prod-3" data-category="girl gifts">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=500&q=80&auto=format&fit=crop"
+              alt="Eleganza Baby Gift Hamper" loading="lazy" class="product-img" />
+            <div class="product-overlay">
+              <div class="product-overlay-content">
+                <span class="product-tag-overlay">Gift Set · 0–6M</span>
+                <p class="product-desc-overlay">Luxury gift hamper with romper, booties &amp; hat. Gorgeous keepsake box
+                  included.</p>
+                <button class="btn-primary btn-sm product-cta" onclick="openWhatsApp('Eleganza Baby Gift Hamper')">
+                  <i data-lucide="message-circle" style="width:14px;height:14px;"></i> Enquire
+                </button>
+              </div>
+            </div>
+            <span class="product-badge badge-bestseller">Bestseller</span>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Gift Sets</span>
+            <h3 class="product-name">Luxury Gift Hamper</h3>
+            <div class="product-price-row">
+              <span class="product-price">Rs. 5,900</span>
+              <span class="product-price-old">Rs. 7,200</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" id="prod-4" data-category="newborn girl">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1596870230751-ebdfce98ec42?w=500&q=80&auto=format&fit=crop"
+              alt="Bloom Baby Dress" loading="lazy" class="product-img" />
+            <div class="product-overlay">
+              <div class="product-overlay-content">
+                <span class="product-tag-overlay">Girls · 3–6M</span>
+                <p class="product-desc-overlay">Floral embroidery on premium cotton. Gentle on delicate skin.</p>
+                <button class="btn-primary btn-sm product-cta" onclick="openWhatsApp('Bloom Baby Dress')">
+                  <i data-lucide="message-circle" style="width:14px;height:14px;"></i> Enquire
+                </button>
+              </div>
+            </div>
+            <span class="product-badge badge-new">New</span>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Girls · Newborn</span>
+            <h3 class="product-name">Bloom Baby Dress</h3>
+            <div class="product-price-row">
+              <span class="product-price">Rs. 2,400</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" id="prod-5" data-category="toddler girl">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?w=500&q=80&auto=format&fit=crop"
+              alt="Princess Tutu Skirt Set" loading="lazy" class="product-img" />
+            <div class="product-overlay">
+              <div class="product-overlay-content">
+                <span class="product-tag-overlay">Girls · 1–3Y</span>
+                <p class="product-desc-overlay">Dreamy tutu skirt with matching headband. For your little princess.</p>
+                <button class="btn-primary btn-sm product-cta" onclick="openWhatsApp('Princess Tutu Skirt Set')">
+                  <i data-lucide="message-circle" style="width:14px;height:14px;"></i> Enquire
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Girls · Toddler</span>
+            <h3 class="product-name">Princess Tutu Set</h3>
+            <div class="product-price-row">
+              <span class="product-price">Rs. 3,650</span>
+              <span class="product-price-old">Rs. 4,200</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" id="prod-6" data-category="boy gifts">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80&auto=format&fit=crop"
+              alt="Little Gentleman Gift Set" loading="lazy" class="product-img" />
+            <div class="product-overlay">
+              <div class="product-overlay-content">
+                <span class="product-tag-overlay">Boys · 0–6M</span>
+                <p class="product-desc-overlay">Sophisticated little gentleman set with bowtie, suspenders &amp; hat.
+                </p>
+                <button class="btn-primary btn-sm product-cta" onclick="openWhatsApp('Little Gentleman Gift Set')">
+                  <i data-lucide="message-circle" style="width:14px;height:14px;"></i> Enquire
+                </button>
+              </div>
+            </div>
+            <span class="product-badge badge-limited">Limited</span>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Boys · Gift Sets</span>
+            <h3 class="product-name">Little Gentleman Set</h3>
+            <div class="product-price-row">
+              <span class="product-price">Rs. 4,500</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /products-grid -->
+
+      <div class="section-footer-action">
+        <button class="btn-outline btn-lg" id="view-all-products" onclick="openWhatsApp('product catalogue')">
+          View Full Collection
+          <i data-lucide="arrow-right" style="width:18px;height:18px;"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== OFFERS BANNER ===================== -->
+  <section class="section offers-section" id="offers">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Limited Time</span>
+        <h2 class="section-title">Weekly Offers</h2>
+        <p class="section-subtitle">Hand-picked deals refreshed every week — don't miss out!</p>
+      </div>
+
+      <div class="offers-grid" id="offers-grid">
+        <!-- Offers are rendered dynamically by admin.js -->
+      </div>
+
+      <!-- Offer Countdown -->
+      <div class="offer-countdown-wrap" id="offer-countdown-wrap">
+        <p class="countdown-label">🔥 Offers expire in:</p>
+        <div class="countdown-timer" id="countdown-timer">
+          <div class="countdown-unit" id="cd-days">
+            <span class="countdown-num" id="cd-days-num">00</span>
+            <span class="countdown-unit-label">Days</span>
+          </div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit" id="cd-hours">
+            <span class="countdown-num" id="cd-hours-num">00</span>
+            <span class="countdown-unit-label">Hours</span>
+          </div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit" id="cd-mins">
+            <span class="countdown-num" id="cd-mins-num">00</span>
+            <span class="countdown-unit-label">Mins</span>
+          </div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit" id="cd-secs">
+            <span class="countdown-num" id="cd-secs-num">00</span>
+            <span class="countdown-unit-label">Secs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section class="section services-section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">What We Offer</span>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">More than just shopping — an experience tailored for your family.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" id="svc-onsite">
+          <div class="service-icon-wrap">
+            <i data-lucide="user-check" class="service-icon"></i>
+          </div>
+          <h3>On-site Service</h3>
+          <p>Visit our store and receive personalized styling guidance from our baby fashion experts. We help you find
+            the perfect fit for every milestone.</p>
+          <a href="#contact" class="service-link" id="svc-onsite-link">
+            Book a Visit <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+          </a>
+        </div>
+        <div class="service-card service-card-highlight" id="svc-quickvisit">
+          <div class="service-icon-wrap">
+            <i data-lucide="map-pin" class="service-icon"></i>
+          </div>
+          <h3>Quick Visit</h3>
+          <p>Short on time? Call ahead and we'll have your pre-selected items ready for a fast in-store pickup.
+            Effortless &amp; elegant.</p>
+          <a href="tel:+94777669391" class="service-link" id="svc-quickvisit-link">
+            Call Now <i data-lucide="phone" style="width:14px;height:14px;"></i>
+          </a>
+        </div>
+        <div class="service-card" id="svc-gifting">
+          <div class="service-icon-wrap">
+            <i data-lucide="gift" class="service-icon"></i>
+          </div>
+          <h3>Gift Wrapping</h3>
+          <p>Make every occasion unforgettable with our premium gift wrapping service. Beautiful presentation for baby
+            showers, birthdays &amp; more.</p>
+          <a href="#contact" class="service-link" id="svc-gifting-link">
+            Learn More <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+          </a>
+        </div>
+        <div class="service-card" id="svc-delivery">
+          <div class="feature-icon-wrap">
+            <i data-lucide="truck" class="service-icon"></i>
+          </div>
+          <h3>Island-wide Delivery</h3>
+          <p>We deliver across Sri Lanka. Fast, secure and carefully packaged so your little one's outfits arrive in
+            pristine condition.</p>
+          <a href="#contact" class="service-link" id="svc-delivery-link">
+            Get in Touch <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="section testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Reviews</span>
+        <h2 class="section-title">Loved by Families</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card" id="testi-1">
+          <div class="stars">★★★★★</div>
+          <p>"The quality is outstanding! My daughter looked absolutely adorable in the romper set. Fast delivery and
+            beautifully packaged."</p>
+          <div class="testimonial-author">
+            <div class="avatar" aria-hidden="true">N</div>
+            <div>
+              <strong>Nimesha P.</strong>
+              <span>Colombo</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" id="testi-2">
+          <div class="stars">★★★★★</div>
+          <p>"Eleganza is our go-to for baby gifts! The gift hamper was stunning — the recipient couldn't stop raving
+            about it."</p>
+          <div class="testimonial-author">
+            <div class="avatar" aria-hidden="true">S</div>
+            <div>
+              <strong>Sandali R.</strong>
+              <span>Kandy</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" id="testi-3">
+          <div class="stars">★★★★★</div>
+          <p>"The on-site styling service was incredible! The team was so helpful and patient. Found the perfect outfit
+            for our baby's big day."</p>
+          <div class="testimonial-author">
+            <div class="avatar" aria-hidden="true">A</div>
+            <div>
+              <strong>Amaya K.</strong>
+              <span>Galle</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INSTAGRAM STRIP ===================== -->
+  <section class="section insta-section" id="insta">
+    <div class="container">
+      <div class="insta-header">
+        <i data-lucide="instagram" style="width:24px;height:24px;"></i>
+        <span>Follow us on Instagram</span>
+        <a href="https://www.instagram.com/eleganza.lk" target="_blank" rel="noopener noreferrer"
+          id="insta-handle-link">@eleganza.lk</a>
+      </div>
+      <div class="insta-grid">
+        <a href="https://www.instagram.com/eleganza.lk" target="_blank" rel="noopener noreferrer" class="insta-item"
+          id="insta-1">
+          <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=400&q=80&auto=format&fit=crop"
+            alt="Eleganza Instagram" loading="lazy" />
+          <div class="insta-hover"><i data-lucide="instagram" style="width:28px;height:28px;"></i></div>
+        </a>
+        <a href="https://www.instagram.com/eleganza.lk" target="_blank" rel="noopener noreferrer" class="insta-item"
+          id="insta-2">
+          <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=400&q=80&auto=format&fit=crop"
+            alt="Eleganza Instagram" loading="lazy" />
+          <div class="insta-hover"><i data-lucide="instagram" style="width:28px;height:28px;"></i></div>
+        </a>
+        <a href="https://www.instagram.com/eleganza.lk" target="_blank" rel="noopener noreferrer" class="insta-item"
+          id="insta-3">
+          <img src="https://images.unsplash.com/photo-1471286174890-9c112ac6476b?w=400&q=80&auto=format&fit=crop"
+            alt="Eleganza Instagram" loading="lazy" />
+          <div class="insta-hover"><i data-lucide="instagram" style="width:28px;height:28px;"></i></div>
+        </a>
+        <a href="https://www.instagram.com/eleganza.lk" target="_blank" rel="noopener noreferrer" class="insta-item"
+          id="insta-4">
+          <img src="https://images.unsplash.com/photo-1596870230751-ebdfce98ec42?w=400&q=80&auto=format&fit=crop"
+            alt="Eleganza Instagram" loading="lazy" />
+          <div class="insta-hover"><i data-lucide="instagram" style="width:28px;height:28px;"></i></div>
+        </a>
+        <a href="https://www.instagram.com/eleganza.lk" target="_blank" rel="noopener noreferrer" class="insta-item"
+          id="insta-5">
+          <img src="https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?w=400&q=80&auto=format&fit=crop"
+            alt="Eleganza Instagram" loading="lazy" />
+          <div class="insta-hover"><i data-lucide="instagram" style="width:28px;height:28px;"></i></div>
+        </a>
+        <a href="https://www.instagram.com/eleganza.lk" target="_blank" rel="noopener noreferrer" class="insta-item"
+          id="insta-6">
+          <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=400&q=80&auto=format&fit=crop"
+            alt="Eleganza Instagram" loading="lazy" />
+          <div class="insta-hover"><i data-lucide="instagram" style="width:28px;height:28px;"></i></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT / FOOTER ===================== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Get In Touch</span>
+        <h2 class="section-title">Find Us</h2>
+        <p class="section-subtitle">We'd love to welcome you — in store or online.</p>
+      </div>
+      <div class="contact-grid">
+        <!-- Map -->
+        <div class="contact-map-wrap" id="contact-map">
+          <a href="https://maps.app.goo.gl/KrBYSZnpa2G1z5DF6" target="_blank" rel="noopener noreferrer"
+            class="map-link-btn" id="map-directions-btn">
+            <div class="map-placeholder">
+              <i data-lucide="map" style="width:48px;height:48px;"></i>
+              <p>Click to open in Google Maps</p>
+              <span>Get Directions →</span>
+            </div>
+          </a>
+        </div>
+        <!-- Contact Info -->
+        <div class="contact-info-card" id="contact-info">
+          <h3>Eleganza Store</h3>
+          <div class="contact-item" id="contact-phone">
+            <i data-lucide="phone"></i>
+            <div>
+              <strong>Phone / WhatsApp</strong>
+              <a href="tel:+94777669391">+94 777 669 391</a>
+            </div>
+          </div>
+          <div class="contact-item" id="contact-location">
+            <i data-lucide="map-pin"></i>
+            <div>
+              <strong>Location</strong>
+              <a href="https://maps.app.goo.gl/KrBYSZnpa2G1z5DF6" target="_blank" rel="noopener noreferrer">View on
+                Google Maps</a>
+            </div>
+          </div>
+          <div class="contact-item" id="contact-hours">
+            <i data-lucide="clock"></i>
+            <div>
+              <strong>Store Hours</strong>
+              <span>Mon–Sat: 9:00 AM – 7:00 PM<br />Sun: 10:00 AM – 5:00 PM</span>
+            </div>
+          </div>
+          <!-- Social Links (admin-managed) -->
+          <div class="social-links" id="social-links">
+            <!-- Rendered by admin.js -->
+          </div>
+          <a href="https://wa.me/94777669391"
+            target="_blank" rel="noopener noreferrer" class="btn-primary btn-full" id="whatsapp-btn">
+            <i data-lucide="message-circle" style="width:18px;height:18px;"></i>
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand" id="footer-brand">
+          <img src="eleganza.jpg" alt="Eleganza" class="footer-logo" />
+          <p class="footer-tagline">Premium baby clothing &amp; lifestyle — where every little one deserves the finest.
+          </p>
+        </div>
+        <div class="footer-links-group" id="footer-nav-group">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="#hero" id="fn-home">Home</a></li>
+            <li><a href="#new-arrivals" id="fn-arrivals">New Arrivals</a></li>
+            <li><a href="#offers" id="fn-offers">Weekly Offers</a></li>
+            <li><a href="#services" id="fn-services">Services</a></li>
+            <li><a href="#contact" id="fn-contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group" id="footer-social-group">
+          <h4>Follow Us</h4>
+          <ul id="footer-social-list">
+            <!-- Rendered by admin.js -->
+          </ul>
+        </div>
+        <div class="footer-links-group" id="footer-contact-group">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+94777669391" id="fn-phone">+94 777 669 391</a></li>
+            <li><a href="https://maps.app.goo.gl/KrBYSZnpa2G1z5DF6" target="_blank" rel="noopener noreferrer"
+                id="fn-location">Our Location</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p id="footer-copy">&copy; <span id="footer-year"></span> Eleganza. All rights reserved.</p>
+        <p class="footer-credit">Crafted with ❤️ for tiny humans</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== ADMIN PANEL (Password Protected) ===================== -->
+  <button class="admin-trigger" id="admin-trigger" aria-label="Admin Panel" title="Admin Panel">
+    <i data-lucide="settings" style="width:18px;height:18px;"></i>
+  </button>
+
+  <!-- Admin Modal Overlay -->
+  <div class="admin-overlay" id="admin-overlay" role="dialog" aria-modal="true" aria-label="Admin Panel">
+    <div class="admin-modal" id="admin-modal">
+      <!-- Login Screen -->
+      <div class="admin-login-screen" id="admin-login-screen">
+        <button class="admin-close" id="admin-login-close" aria-label="Close Admin Panel">
+          <i data-lucide="x" style="width:18px;height:18px;"></i>
+        </button>
+        <div class="admin-logo">
+          <i data-lucide="shield" style="width:32px;height:32px;"></i>
+        </div>
+        <h2>Admin Access</h2>
+        <p>Enter your password to manage Eleganza content.</p>
+        <div class="admin-login-form" id="admin-login-form">
+          <input type="password" id="admin-password-input" placeholder="Enter password" class="admin-input"
+            autocomplete="current-password" />
+          <button class="btn-primary btn-full" id="admin-login-btn">Login</button>
+          <p class="admin-hint" id="admin-login-error" style="display:none;color:#ef4444;">Incorrect password. Try
+            again.</p>
+        </div>
+      </div>
+
+      <!-- Admin Dashboard -->
+      <div class="admin-dashboard" id="admin-dashboard" style="display:none;">
+        <div class="admin-dashboard-header">
+          <h2>🛍️ Eleganza Admin</h2>
+          <button class="admin-close" id="admin-close-btn" aria-label="Close Admin Panel">
+            <i data-lucide="x" style="width:18px;height:18px;"></i>
+          </button>
+        </div>
+
+        <!-- Tabs -->
+        <div class="admin-tabs" role="tablist">
+          <button class="admin-tab active" id="atab-offers" data-tab="offers" role="tab">Weekly Offers</button>
+          <button class="admin-tab" id="atab-arrivals" data-tab="arrivals" role="tab">New Arrivals</button>
+          <button class="admin-tab" id="atab-socials" data-tab="socials" role="tab">Social Links</button>
+          <button class="admin-tab" id="atab-announcement" data-tab="announcement" role="tab">Announcement</button>
+        </div>
+
+        <!-- Panel: Offers -->
+        <div class="admin-panel" id="apanel-offers">
+          <h3>Manage Weekly Offers</h3>
+          <div class="admin-offers-list" id="admin-offers-list"></div>
+          <button class="btn-outline btn-sm mt-2" id="add-offer-btn">
+            <i data-lucide="plus" style="width:14px;height:14px;"></i> Add Offer
+          </button>
+          <div class="admin-offer-form" id="admin-offer-form" style="display:none;">
+            <input type="text" class="admin-input" id="offer-name-input"
+              placeholder="Offer name (e.g. Buy 2 Get 1 Free)" />
+            <input type="text" class="admin-input" id="offer-discount-input"
+              placeholder="Discount label (e.g. 30% OFF)" />
+            <input type="text" class="admin-input" id="offer-desc-input" placeholder="Short description" />
+            <input type="text" class="admin-input" id="offer-img-input" placeholder="Image URL (optional)" />
+            <div style="display:flex;gap:8px;">
+              <button class="btn-primary btn-sm" id="save-offer-btn">Save Offer</button>
+              <button class="btn-ghost btn-sm" id="cancel-offer-btn">Cancel</button>
+            </div>
+          </div>
+          <hr />
+          <label style="font-size:0.85rem;font-weight:600;margin-top:8px;display:block;">Offer Deadline</label>
+          <input type="datetime-local" class="admin-input" id="offer-deadline-input" />
+          <button class="btn-primary btn-sm mt-1" id="save-deadline-btn">Save Deadline</button>
+        </div>
+
+        <!-- Panel: Arrivals -->
+        <div class="admin-panel" id="apanel-arrivals" style="display:none;">
+          <h3>Manage New Arrivals</h3>
+          <p class="admin-panel-note">Update product cards from <code>admin.js</code> → <code>ADMIN_DATA.products</code>
+            array. Each entry supports: name, category, price, oldPrice, badge, imgUrl, description.</p>
+          <div class="admin-arrivals-info" id="admin-arrivals-info">
+            <p>✅ Products are managed via the <strong>admin.js</strong> data file. Edit the
+              <code>ADMIN_DATA.products</code> array to add, update or remove products without touching HTML.
+            </p>
+          </div>
+        </div>
+
+        <!-- Panel: Socials -->
+        <div class="admin-panel" id="apanel-socials" style="display:none;">
+          <h3>Manage Social Links</h3>
+          <div class="admin-socials-list" id="admin-socials-list"></div>
+          <button class="btn-outline btn-sm mt-2" id="add-social-btn">
+            <i data-lucide="plus" style="width:14px;height:14px;"></i> Add Social Link
+          </button>
+          <div class="admin-social-form" id="admin-social-form" style="display:none;">
+            <input type="text" class="admin-input" id="social-name-input" placeholder="Platform name (e.g. TikTok)" />
+            <input type="text" class="admin-input" id="social-url-input" placeholder="Full URL" />
+            <input type="text" class="admin-input" id="social-icon-input" placeholder="Lucide icon name (e.g. music)" />
+            <div style="display:flex;gap:8px;">
+              <button class="btn-primary btn-sm" id="save-social-btn">Save Link</button>
+              <button class="btn-ghost btn-sm" id="cancel-social-btn">Cancel</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel: Announcement -->
+        <div class="admin-panel" id="apanel-announcement" style="display:none;">
+          <h3>Announcement Bar</h3>
+          <input type="text" class="admin-input" id="announcement-input" placeholder="Enter announcement text..." />
+          <button class="btn-primary btn-sm mt-1" id="save-announcement-btn">Save &amp; Update</button>
+        </div>
+
+        <div class="admin-save-status" id="admin-save-status" style="display:none;">
+          ✅ Changes saved successfully!
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i data-lucide="chevron-up" style="width:20px;height:20px;"></i>
+  </button>
+
+  <script src="admin.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
